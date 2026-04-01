@@ -51,7 +51,7 @@ a:hover {
 
 <p>System Access Granted 😎</p>
 
-<a href="https://instagram.com/aman_.884" target="_blank">Instagram</a>
+<a href="https://instagram.com/amankumaryadav18918" target="_blank">Instagram</a>
 <a href="#">YouTube</a>
 <a href="#">Telegram</a>
 
