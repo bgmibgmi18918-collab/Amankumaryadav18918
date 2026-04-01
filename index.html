@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Access Terminal</title>
+    <style>
+        body {
+            background: black;
+            color: #00ff00;
+            font-family: monospace;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .blink {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        a {
+            display: block;
+            margin: 15px;
+            color: #00ff00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Accessing System...</h1>
+<h2 class="blink">█</h2>
+
+<script>
+    setTimeout(() => {
+        document.body.innerHTML = `
+        <h1>WELCOME, AMAN KUMAR YADAV 😎</h1>
+        <p>System Access Granted</p>
+
+        <a href="https://instagram.com/amankumaryadav18918" target="_blank">Instagram</a>
+        <a href="#">YouTube</a>
+        <a href="#">Telegram</a>
+        `;
+    }, 3000);
+</script>
+
+</body>
+</html>
