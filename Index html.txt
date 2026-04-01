@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AMAN TERMINAL</title>
+
+<style>
+body {
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 80px;
+}
+
+/* Glow buttons */
+a {
+    display: block;
+    margin: 15px auto;
+    padding: 12px;
+    width: 200px;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: #00ff00;
+    color: black;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+/* Typing effect */
+#text {
+    border-right: 3px solid #00ff00;
+    display: inline;
+    padding-right: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="text"></h1>
+
+<p>System Access Granted 😎</p>
+
+<a href="https://instagram.com/aman_.884" target="_blank">Instagram</a>
+<a href="#">YouTube</a>
+<a href="#">Telegram</a>
+
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+</audio>
+
+<script>
+let text = "WELCOME, AMAN KUMAR YADAV 😎";
+let i = 0;
+
+function type() {
+    if (i < text.length) {
+        document.getElementById("text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 80);
+    }
+}
+
+type();
+</script>
+
+</body>
+</html>
