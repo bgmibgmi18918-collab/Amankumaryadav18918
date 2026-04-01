@@ -1,10 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
+<<img src="https://drive.google.com/file/d/1Aosey3biT2ql_9b42ZsybGjbpkmEBJsL/view?usp=drivesdk" width="120" style="border-radius:50%; box-shadow:0 0 20px #00ff00;">>
 <title>AMAN TERMINAL</title>
 
 <style>
 body {
+    <canvas id="matrix"></canvas>
+
+<script>
+let canvas = document.getElementById("matrix");
+let ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+let letters = "01";
+letters = letters.split("");
+
+let fontSize = 14;
+let columns = canvas.width/fontSize;
+
+let drops = [];
+for(let x=0; x<columns; x++)
+drops[x]=1;
+
+function draw(){
+ctx.fillStyle = "rgba(0,0,0,0.05)";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle="#0f0";
+ctx.font = fontSize+"px monospace";
+
+for(let i=0;i<drops.length;i++){
+let text = letters[Math.floor(Math.random()*letters.length)];
+ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+
+if(drops[i]*fontSize>canvas.height && Math.random()>0.975)
+drops[i]=0;
+
+drops[i]++;
+}
+}
+
+setInterval(draw,33);
+</script>
     background: black;
     color: #00ff00;
     font-family: monospace;
